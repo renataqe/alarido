@@ -2,4 +2,5 @@
 db/*.sqlite3
 config/database.yml
 log/*
-public/photo/*
+public/photos/*
+public/fotos/*
