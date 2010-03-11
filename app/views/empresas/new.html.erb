@@ -10,12 +10,16 @@
           <h1 style=" color:#ffff00; ">Quiero apoyar a Alarido</h1>
 
 <% form_for(@empresa) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages :header_message => "Por favor intente nuevamente", :message => "Existen los siguientes errores en los campos de:" %>
 
   <p>
     <%= f.label :nombreEmpresa %><br />
     <%= f.text_field :nombreEmpresa %>
   </p>
+<p>
+  <%= f.label "Email de Contacto" %><br />
+  <%= f.text_field :email %>
+</p>
   <p>
     <%= f.label :logotipo %><br />
     <%= f.text_field :logotipo %>
@@ -24,6 +28,11 @@
     <%= f.label :mensaje %><br />
     <%= f.text_field :mensaje %>
   </p>
+
+<p>
+  <%= f.label :logotipo %><br />
+	<%= f.file_field :foto %>
+</p>
   <p>
    <%= f.submit '', {:id => "boton_crear"}  %>
   </p>

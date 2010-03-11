@@ -6,11 +6,11 @@
 	
     </div>
 
-<div id="content" style="left:300px; background-color:#000; padding:10px; width:800px;">
-          <h1 style=" color:#ffff00; ">Lista de Inscripciones Generales</h1>
+	<div id="content" style="left:300px; background-image:url(img/cuadros/amarillo.png); padding:10px; width:1300px;">
+          <h1 style=" color:black; ">Lista de Profesionales Registrados</h1>
           
           <table border=1 style="font-size:10pt;">
-            <tr style="color:#ffff00; ">
+            <tr style="color:black; ">
               <th>Nombre Empresa</th>
               <th>Nombre Integrante 1</th>
               <th>Nombre Integrante 2</th>
@@ -19,19 +19,20 @@
             </tr>
           
           <% @generals.each do |general| %>
-            <tr style=" color:white; ">
+            <tr style=" color:black; ">
               <td><%=h general.nombreEmpresa %></td>
               <td><%=h general.nombreIntegrante1 %></td>
               <td><%=h general.nombreIntegrante2 %></td>
               <td><%=h general.nombreIntegrante3 %></td>
               <td><%=h general.logotipo %></td>
-              <td><%= link_to 'Mostrar', general %></td>
-              <td><%= link_to 'Editar', edit_general_path(general) %></td>
-              <td><%= link_to 'Eliminar', general, :confirm => 'Seguro?', :method => :delete %></td>
+              <td><%= link_to 'Mostrar', general, :style => "color:black" %></td>
+              <td><%= link_to 'Editar', edit_general_path(general), :style => "color:black" %></td>
+              <td><%= link_to 'Eliminar', general, :confirm => 'Seguro?', :method => :delete, :style => "color:black" %></td>
             </tr>
           <% end %>
           </table>
           
           <br />
+		<p><%= link_to "Regresar", administracion_path, :style => "color:black"  %></p>
           
 </div>

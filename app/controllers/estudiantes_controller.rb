@@ -1,7 +1,7 @@
 class EstudiantesController < ApplicationController
   # GET /estudiantes
   # GET /estudiantes.xml
-    before_filter :login_required, :except =>[:show, :new, :edit, :create, :update ]
+    before_filter :login_required, :except =>[:show, :new, :create ]
   def index
     @estudiantes = Estudiante.all
 

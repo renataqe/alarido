@@ -36,7 +36,7 @@
 </p>
 
 
-<%= link_to '', edit_general_path(@general),{:id => "boton_editar"} %>
+<%#= link_to '', edit_general_path(@general),{:id => "boton_editar"} %>
 
 <p style="top:20px;">
   <a style="color:white;">Forma de Pago:</a>
@@ -79,6 +79,6 @@
 
 </p>
 
-<%= link_to "", {:controller=>'publicos', :action=>'index'}, {:id => "boton_aceptar"} %>
+<%= link_to "", root_path, {:id => "boton_aceptar"} %>
 
 </div>

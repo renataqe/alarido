@@ -6,28 +6,27 @@
 	
     </div>
 
-<div id="content" style="left:300px; background-color:#000; padding:10px; width:800px;">
-          <h1 style=" color:#ffff00; ">Lista de Empresas</h1>
+	<div id="content" style="left:300px; background-image:url(img/cuadros/amarillo.png); padding:10px; width:500px;">
+          <h1 style=" color:black; ">Empresas Donadoras</h1>
 
             <table border=1 style="font-size:10pt;">
-              <tr  style="color:#ffff00; ">
-                <th>Nombreempresa</th>
-                <th>Logotipo</th>
+              <tr  style="color:black; ">
+                <th>Nombre empresa</th>
                 <th>Mensaje</th>
               </tr>
             
             <% @empresas.each do |empresa| %>
-              <tr>
+            <tr  style="color:black; ">
                 <td><%=h empresa.nombreEmpresa %></td>
-                <td><%=h empresa.logotipo %></td>
                 <td><%=h empresa.mensaje %></td>
-                <td><%= link_to 'Show', empresa %></td>
-                <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
-                <td><%= link_to 'Destroy', empresa, :confirm => 'Are you sure?', :method => :delete %></td>
+                <td><%= link_to 'Ver', empresa, :style => "color:black" %></td>
+                <td><%= link_to 'Editar', edit_empresa_path(empresa), :style => "color:black" %></td>
+                <td><%= link_to 'Borrar', empresa, :confirm => 'Estas seguro?', :method => :delete, :style => "color:black" %></td>
               </tr>
             <% end %>
             </table>
             
             <br />
-           
+           	<p><%= link_to "Regresar", administracion_path, :style => "color:black"  %></p>
+		
 </div>
